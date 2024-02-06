@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTodo } from "../action";
+import { deleteTodo } from "../features/todo/todoSlice";
 
 const TaskList = () => {
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.todo.tasks);
   const dispatch = useDispatch();
 
   function deleteTask(id) {
